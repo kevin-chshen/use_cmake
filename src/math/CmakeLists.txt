@@ -1,0 +1,10 @@
+
+# 查找当前目录下的所有源文件，并将名称保存到 变量中
+aux_source_directory(. DIR_LIB_SRCS)
+
+# 生成连接库
+add_library(xmath ${DIR_LIB_SRCS})
+
+# 指定 库的安装路径
+install(TARGETS xmath DESTINATION bin)
+install (FILES xmath DESTINATION include)
